@@ -1,0 +1,12 @@
+articles=[
+    {"name":"Ivan_article",
+     "number":"1"
+     },
+    {"name":"valdez_article",
+     "number":"2"
+     },
+    {
+        "name":"jordan_article",
+     "number":"3"
+    }
+]

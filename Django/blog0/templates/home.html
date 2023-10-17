@@ -1,20 +1,5 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagedaceuile</title>
-    <link rel="stylesheet" href="/style.css/">
-</head>
-
-<body>
-    <ul style="list-style:none">
-        <li><a href="/">home</a></li>
-        <li><a href="/contact/">contact</a></li>
-        <li><a href="/article/">Articles</a></li>
-    </ul>
-    <h1>Bienvenue</h1>
-    
-</body>
-
-</html>
+{% extends 'extention.html'%}
+{% block titre %}page daceuille{% endblock titre %}
+{% block contenu %}
+<h1>Bienvenue</h1>
+{% endblock %}
