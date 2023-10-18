@@ -1,12 +1,15 @@
 articles=[
     {"name":"Ivan_article",
-     "number":"1"
+     "number":"1",
+     "slug":"Article1"
      },
     {"name":"valdez_article",
-     "number":"2"
+     "number":"2",
+      "slug":"Article2"
      },
     {
         "name":"jordan_article",
-     "number":"3"
+     "number":"3",
+      "slug":"Article3"
     }
 ]
