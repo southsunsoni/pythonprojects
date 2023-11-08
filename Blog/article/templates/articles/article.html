@@ -1,0 +1,12 @@
+{%extends 'extension.html'%}
+
+{%block titre%} page_darticle{%endblock titre%}
+{%block contenu%}
+<h1>Ma page darticle</h1>
+     {%for article in articles%}
+         <h1><a href="{% url 'produit:article' slug=article.slug%}">{{article.nachname}}</a></h1>
+         <h1><a href="">{{article.vorname}}</a></h1>
+         <p>{{article.Birthdate}}</p>
+        {%endfor %}
+
+{%endblock contenu%}
