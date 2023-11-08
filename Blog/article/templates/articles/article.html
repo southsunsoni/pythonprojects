@@ -3,6 +3,7 @@
 {%block titre%} page_darticle{%endblock titre%}
 {%block contenu%}
 <h1>Ma page darticle</h1>
+<a class="btn btn-primary" href="{% url 'produit:creet'%}">creet</a>
      {%for article in articles%}
          <h1><a href="{% url 'produit:article' slug=article.slug%}">{{article.nachname}}</a></h1>
          <h1><a href="">{{article.vorname}}</a></h1>

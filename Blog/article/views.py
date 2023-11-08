@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .form import ArticleForm
 from .models import Article
 from django.http import Http404
 
@@ -13,3 +14,6 @@ def article_view(request,slug):
         return render(request,'articles/detail.html',context={'article':article})
     except Article.doesnotexist:
         raise Http404("page nexiste pas")
+def creet_view(request):
+    form=ArticleForm()
+    return render(request,'articles/creet.html',context={'form':form})
