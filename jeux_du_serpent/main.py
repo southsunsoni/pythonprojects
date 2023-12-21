@@ -13,13 +13,16 @@ class player():
         Anforderung_zu_nutzer=f"{self.name} enter the y-coordinate "
         print(Anforderung_zu_nutzer)
         self.y_coordinate=int(input()) 
-    def Move_to_coordinates(self):
-        pass
-        
 class point():
     def __init__(self,x_coordinate,y_coordinate) -> None:
         self.x_coordinate=x_coordinate
         self.y_coordinate=y_coordinate
+def trial():
+    left=f"left"
+    screen(left)
+def screen(var):
+    print(var)
+
     
 def main():
     print("Do you want to start a party?")
@@ -31,7 +34,22 @@ def main():
             Point= point(random.randrange(1,100),random.randrange(1,100))
             cartecian_coordinates=f"x:{Point.x_coordinate},y:{Point.y_coordinate}"
             print(cartecian_coordinates)
+            value=f"{Player.name}:{Player.score}"
+            print(value)
             Player.Navigate_player()
             if Player.x_coordinate==Point.x_coordinate and Player.y_coordinate==Point.y_coordinate:
-                print('hi')
+                Player.score+=1
+                
+                
+            else:
+                while Player.x_coordinate!=Point.x_coordinate or Player.y_coordinate!=Point.y_coordinate:
+                    cartecian_coordinates=f"x:{Point.x_coordinate},y:{Point.y_coordinate}"
+                    print(cartecian_coordinates)
+                    print(value)
+                    Player.Navigate_player()
+                    if Player.x_coordinate==Point.x_coordinate and Player.y_coordinate==Point.y_coordinate:
+                        Player.score+=1
+            if Player.score==3:
+                main()       
+                    
 main()
