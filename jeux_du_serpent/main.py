@@ -1,5 +1,5 @@
 import random
-
+import UI as ui
 class player():
     def __init__(self,name) -> None:
         self.name=name
@@ -18,8 +18,7 @@ class point():
         self.x_coordinate=x_coordinate
         self.y_coordinate=y_coordinate
 def trial():
-    left=f"left"
-    screen(left)
+    ui.cardre_jeux.configure(text="my name")
 def screen(var):
     print(var)
 
